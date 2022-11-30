@@ -1,0 +1,20 @@
+{
+  "name": "udemy-node-tutorial-with-john",
+  "version": "1.0.0",
+  "description": "Node tutorial with John Smilga on udemy.com",
+  "main": "1-intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImagineMe360/Udemy-node-tutorial-with-John.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImagineMe360/Udemy-node-tutorial-with-John/issues"
+  },
+  "homepage": "https://github.com/ImagineMe360/Udemy-node-tutorial-with-John#readme"
+}
