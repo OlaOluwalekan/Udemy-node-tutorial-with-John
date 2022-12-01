@@ -1,6 +1,14 @@
-const ash = require("lodash");
-const items = [1, [2, [3, [4]]]];
-const newItems = ash.flattenDeep(items);
+const { readFile } = require("fs");
 
-console.log(newItems);
-console.log("common church");
+const getText = (path) => {
+  return new Promise((resolve, reject) => {
+    readFile(path, "utf8", (err, res) => {
+      if (err) {
+        console.log(err);
+        return;
+      } else {
+        console.log(res);
+      }
+    });
+  });
+};
