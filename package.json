@@ -4,7 +4,7 @@
   "description": "Node tutorial with John Smilga on udemy.com",
   "main": "1-intro.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/ImagineMe360/Udemy-node-tutorial-with-John/issues"
   },
-  "homepage": "https://github.com/ImagineMe360/Udemy-node-tutorial-with-John#readme"
+  "homepage": "https://github.com/ImagineMe360/Udemy-node-tutorial-with-John#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
