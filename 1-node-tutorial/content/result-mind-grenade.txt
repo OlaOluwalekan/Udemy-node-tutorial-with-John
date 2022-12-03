@@ -1,0 +1,1 @@
+the result is hello this is first test file and hello this is second text file
