@@ -1,12 +1,9 @@
-const http = require("http");
+const express = require("express");
+const app = express();
+const { products } = require("./data");
 
-const server = http.createServer((req, res) => {
-  console.log("user hit server");
-  res.end("hello");
+app.get("/", (req, res) => {
+  res.json(products);
 });
 
-server.listen(5000, () => {
-  console.log("server is listening on prot 5000...");
-});
-
-// console.log(server);
+app.listen(5000);
