@@ -1,28 +1,23 @@
+// const { json } = require("express");
 const express = require("express");
 const app = express();
-const { products } = require("./data");
+const people = require("./routes/people");
+const auth = require("./routes/auth");
+// STATIC ASSET
+app.use(express.static("./methods-public"));
 
-app.get("/", (req, res) => {
-  res.send(`<h1>Home Page</h1> <a href="/api/products">Products</a>`);
+// PARSE FORM DATE
+app.use(express.urlencoded({ extended: false }));
+
+// PARSE JSON DATA
+app.use(express.json());
+
+// GET PEOPLES ROUTE
+app.use("/api/people", people);
+
+// GET LOGIN ROUTER
+app.use("/login", auth);
+
+app.listen(5000, () => {
+  console.log("server is listening on port 5000...");
 });
-
-app.get("/api/products", (req, res) => {
-  const newProducts = products.map((product) => {
-    const { id, name, image } = product;
-    return { id, name, image };
-  });
-  res.json(newProducts);
-});
-
-app.get("/api/products/:productID", (req, res) => {
-  const { productID } = req.params;
-  const singleProduct = products.find((product) => {
-    return product.id == productID;
-  });
-  if (!singleProduct) {
-    return res.status(404).send(`Product with id ${productID} does not exist`);
-  }
-  return res.json(singleProduct);
-});
-
-app.listen(5000);
