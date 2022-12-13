@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const ProductSchema = new mongoose.Schema({
   name: {
@@ -25,10 +25,10 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     enum: {
       values: ["ikea", "liddy", "caressa", "marcos"],
-      message: '{VALUE} is not supported'
+      message: "{VALUE} is not supported",
     },
     // emun:['ikea','liddy','caressa','marcos']
   },
 });
 
-module.exports = mongoose.model("Products",ProductSchema)
+module.exports = mongoose.model("Products", ProductSchema);
